@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Transform your body and life with expert personal training. Get customized workout plans, nutrition guidance, and dedicated support to achieve your fitness goals." />
+    <title>Elite Personal Training - Transform Your Body</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-container">
+            <button class="logo" onclick="scrollToSection('hero')">
+                ELITE<span>FIT</span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
+                <li><a href="#services" onclick="scrollToSection('services'); return false;">Services</a></li>
+                <li><a href="#results" onclick="scrollToSection('results'); return false;">Results</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact'); return false;">Get
+                        Started</a></li>
+            </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="/assets/img/hero.webp" alt="Personal trainer in action">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>TRANSFORM YOUR BODY.<br>TRANSFORM YOUR LIFE.</h1>
+            <p>Expert personal training designed to help you achieve results you never thought possible.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                    Start Your Journey →
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('services')">
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-dot"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-bg-white">
+        <div class="container">
+            <!-- Decorative dots -->
+            <div class="decorative-dots" style="top: 50px; right: 5%; color: var(--color-primary);">
+                <div class="dot dot-large" style="top: 0; left: 0;"></div>
+                <div class="dot dot-small" style="top: 25px; left: 20px;"></div>
+                <div class="dot dot-medium" style="top: 50px; left: 10px;"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="/assets/img/about.webp" alt="Professional trainer">
+                    <div class="about-badge">
+                        <div class="number" data-count="10">0</div>
+                        <div class="label">YEARS</div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <h2>YOUR SUCCESS IS MY MISSION</h2>
+                    <p>With over a decade of experience transforming lives, I specialize in creating personalized
+                        fitness programs that deliver real, sustainable results. My approach combines cutting-edge
+                        training techniques with proven nutrition strategies to help you reach your full potential.</p>
+                    <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
+                        here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat stagger-item">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                            <div class="stat-value" data-count="10">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat stagger-item">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div class="stat-value" data-count="500">0</div>
+                            <div class="stat-label">Clients Transformed</div>
+                        </div>
+                        <div class="stat stagger-item">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            <div class="stat-value" data-count="15">0</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-bg-gray">
+        <div class="container">
+            <div class="decorative-line line-horizontal" style="top: 80px; left: 5%; color: var(--color-primary);">
+            </div>
+            <div class="decorative-dots" style="top: 150px; left: 8%; color: var(--color-primary);">
+                <div class="dot dot-small" style="top: 0; left: 0;"></div>
+                <div class="dot dot-small" style="top: 15px; left: 10px;"></div>
+            </div>
+
+            <div class="section-header reveal-up">
+                <h2>COMPREHENSIVE TRAINING SOLUTIONS</h2>
+                <p>Choose from a range of professional services designed to fit your lifestyle and accelerate your
+                    progress.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card stagger-item">
+                    <div class="service-image">
+                        <img src="/assets/img/personal.webp" alt="Personal Training">
+                    </div>
+                    <div class="service-content">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6.5 6.5m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <path d="M17.5 6.5m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <rect x="2" y="13" width="9" height="7" rx="1"></rect>
+                            <rect x="13" y="13" width="9" height="7" rx="1"></rect>
+                        </svg>
+                        <h3>Personal Training</h3>
+                        <p>One-on-one customized workout sessions tailored to your specific goals and fitness level.</p>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-card stagger-item">
+                    <div class="service-image">
+                        <img src="/assets/img/group.webp" alt="Group Classes">
+                    </div>
+                    <div class="service-content">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3>Group Classes</h3>
+                        <p>High-energy group sessions that build community while pushing you to your limits.</p>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-card stagger-item">
+                    <div class="service-image">
+                        <img src="/assets/img/online.webp" alt="Online Coaching">
+                    </div>
+                    <div class="service-content">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3>Online Coaching</h3>
+                        <p>Train anywhere with personalized virtual coaching and real-time feedback.</p>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-card stagger-item">
+                    <div class="service-image">
+                        <img src="/assets/img/nutrition.webp" alt="Nutrition Planning">
+                    </div>
+                    <div class="service-content">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2a10 10 0 0 1 7.38 16.75"></path>
+                            <path d="M12 8v8"></path>
+                            <path d="M16 12H8"></path>
+                            <path d="m2.93 17.07 2.12-2.12"></path>
+                        </svg>
+                        <h3>Nutrition Planning</h3>
+                        <p>Custom meal plans designed to fuel your workouts and accelerate your results.</p>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="results" class="section-bg-white">
+        <div class="container">
+            <div class="decorative-dots" style="top: 100px; right: 10%; color: var(--color-primary);">
+                <div class="dot dot-medium" style="top: 0; left: 0;"></div>
+                <div class="dot dot-small" style="top: 30px; left: 15px;"></div>
+            </div>
+
+            <div class="section-header reveal-up">
+                <h2>REAL PEOPLE. REAL RESULTS.</h2>
+                <p>See how our clients have transformed their bodies and lives with dedicated training and support.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card stagger-item">
+                    <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                    </svg>
+                    <p class="testimonial-text">"Working with this trainer completely transformed my life. The
+                        personalized approach and constant support made all the difference. I finally achieved the body
+                        I always wanted."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p class="author-result">Lost 30 lbs in 4 months</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card stagger-item">
+                    <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                    </svg>
+                    <p class="testimonial-text">"The structured training program and nutrition guidance helped me build
+                        muscle faster than I thought possible. My confidence has skyrocketed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p class="author-result">Gained 15 lbs of muscle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card stagger-item">
+                    <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+                    </svg>
+                    <p class="testimonial-text">"From barely running a mile to completing a marathon in 6 months. The
+                        progressive training plan was challenging but achievable. I never thought I could do it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p class="author-result">Completed first marathon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-bg-black">
+        <div class="container reveal-up" style="text-align: center; max-width: 900px;">
+            <div class="decorative-dots" style="top: 60px; left: 10%; color: white;">
+                <div class="dot dot-small" style="top: 0; left: 0;"></div>
+                <div class="dot dot-medium" style="top: 20px; left: 15px;"></div>
+            </div>
+            <div class="decorative-dots" style="top: 80px; right: 10%; color: white;">
+                <div class="dot dot-large" style="top: 0; left: 0;"></div>
+                <div class="dot dot-small" style="top: 30px; left: 20px;"></div>
+            </div>
+
+            <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem;">READY TO TRANSFORM?</h2>
+            <p style="font-size: clamp(1.25rem, 3vw, 1.75rem); margin-bottom: 2rem; opacity: 0.9; font-weight: 300;">
+                Don't wait another day to start building the body you deserve. Limited spots available this month.</p>
+            <button class="btn"
+                style="background: white; color: black; border-color: white; padding: 1.25rem 2rem; font-size: 1.125rem;"
+                onclick="scrollToSection('contact')">
+                Start Your Journey Today →
+            </button>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem; opacity: 0.7;">Only 3 spots remaining for this month</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-bg-white">
+        <div class="container">
+            <div class="decorative-line line-horizontal" style="top: 100px; right: 5%; color: var(--color-primary);">
+            </div>
+
+            <div class="section-header reveal-up">
+                <h2>LET'S START YOUR TRANSFORMATION</h2>
+                <p>Ready to take the first step? Fill out the form below and I'll be in touch within 24 hours.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left"
+                    style="background: var(--color-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border);">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="goal">Fitness Goal</label>
+                            <select id="goal" name="goal">
+                                <option value="">Select your primary goal</option>
+                                <option value="weight-loss">Weight Loss</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="strength">Strength Training</option>
+                                <option value="endurance">Endurance</option>
+                                <option value="general">General Fitness</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"
+                                placeholder="Tell me about your fitness journey and what you're looking to achieve..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Contact Information</h3>
+                    <a href="mailto:contact@elitefit.com" class="contact-info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>contact@elitefit.com</span>
+                    </a>
+                    <a href="tel:+15551234567" class="contact-info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <span>(555) 123-4567</span>
+                    </a>
+                    <div class="contact-info-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>123 Fitness St, Gym City, ST 12345</span>
+                    </div>
+
+                    <h3 style="font-size: 1.5rem; margin: 2rem 0 1.5rem;">Follow My Journey</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg class="icon-svg" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg class="icon-svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg class="icon-svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="newsletter-box">
+                        <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Stay Updated</h4>
+                        <p style="font-size: 0.875rem; color: var(--color-muted); margin-bottom: 1rem;">Subscribe to
+                            receive fitness tips, workout ideas, and exclusive offers.</p>
+                        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="reveal-up">
+                <div class="logo">ELITE<span>FIT</span></div>
+                <p>© 2024 EliteFit Personal Training. All rights reserved.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script>
+        // Sticky navigation on scroll
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('navLinks').classList.remove('active');
+            }
+        }
+
+        // Scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all reveal elements
+        document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger animation for grid items
+        const staggerObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.stagger-item');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, index * 100);
+                    });
+                    staggerObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections with stagger items
+        document.querySelectorAll('.stats-grid, .services-grid, .testimonials-grid').forEach(el => {
+            staggerObserver.observe(el);
+        });
+
+        // Counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Observe counter elements
+        const counterObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-value[data-count], .about-badge .number[data-count]').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! I\'ll get back to you within 24 hours.');
+            event.target.reset();
+        }
+
+        // Newsletter submission
+        function handleNewsletter(event) {
+            event.preventDefault();
+            alert('Successfully subscribed to the newsletter!');
+            event.target.reset();
+        }
+    </script>
+</body>
+
+
+</html>
