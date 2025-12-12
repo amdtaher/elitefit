@@ -383,7 +383,7 @@
 
         @media (max-width:520px) {
             :root {
-                --card-w: 200px;
+                --card-w: 250px;
                 --card-h: 380px;
                 --nav-size: 40px
             }
