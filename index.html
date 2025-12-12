@@ -176,7 +176,7 @@
                 </div>
                 <div class="service-card stagger-item">
                     <div class="service-image">
-                        <img class="img"src="/assets/img/online.webp" alt="Online Coaching" loading="lazy">
+                        <img class="img" src="/assets/img/online.webp" alt="Online Coaching" loading="lazy">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -208,6 +208,116 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section" aria-label="carousel section">
+        <div class="section-header reveal-up">
+            <h2>CHECK OUT OUR CLASSES</h2>
+            <p>See what we will teach and train our clients to get bettter build quickly </p>
+        </div>
+        <div class="carousel-shell">
+            <div class="carousel" id="carousel" tabindex="0">
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/group.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>Push ups</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/nutrition.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">Women</div>
+                        <h3>Sit ups</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/online.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>Dumbell pull</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/personal.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>rope hoping</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/group.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>Boxing Match</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/nutrition.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>Push ups</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media">
+                        <img src="assets//img/online.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="content">
+                        <div class="badge">MEN</div>
+                        <h3>muscle build</h3>
+                        <p>Maintain muscle and get results at home with our minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- arrows (positioned relative to shell so easy to move) -->
+            <button class="nav left" id="prevBtn" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="nav right" id="nextBtn" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
     </section>
 
@@ -412,127 +522,7 @@
         </div>
     </section>
 
-    <script>
-        // Sticky navigation on scroll
-        window.addEventListener('scroll', function () {
-            const nav = document.getElementById('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Smooth scroll to section
-        function scrollToSection(id) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-                document.getElementById('navLinks').classList.remove('active');
-            }
-        }
-
-        // Scroll reveal animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all reveal elements
-        document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Stagger animation for grid items
-        const staggerObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const items = entry.target.querySelectorAll('.stagger-item');
-                    items.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.classList.add('active');
-                        }, index * 100);
-                    });
-                    staggerObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections with stagger items
-        document.querySelectorAll('.stats-grid, .services-grid, .testimonials-grid').forEach(el => {
-            staggerObserver.observe(el);
-        });
-
-        // Counter animation
-        function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-count'));
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
-
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 16);
-        }
-
-        // Observe counter elements
-        const counterObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-value[data-count], .about-badge .number[data-count]').forEach(el => {
-            counterObserver.observe(el);
-        });
-
-        // Form submission
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for reaching out! I\'ll get back to you within 24 hours.');
-            event.target.reset();
-        }
-
-        // Newsletter submission
-        function handleNewsletter(event) {
-            event.preventDefault();
-            alert('Successfully subscribed to the newsletter!');
-            event.target.reset();
-        }
-        // Add .loaded as soon as browser finishes decoding/displaying the image
-        document.querySelectorAll('img.img').forEach(img => {
-            if (img.complete && img.naturalWidth !== 0) {
-            img.classList.add('loaded'); // already cached/loaded
-            } else {
-            img.addEventListener('load', () => img.classList.add('loaded'));
-            // for cached images in some browsers
-            img.addEventListener('error', ()=> img.classList.add('loaded'));
-            }
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 

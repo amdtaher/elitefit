@@ -40,6 +40,11 @@
             scroll-behavior: smooth;
         }
 
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
         /* Animation Keyframes */
         @keyframes fadeInUp {
             from {
@@ -151,6 +156,257 @@
                 transform: translateX(-50%) translateY(-5px);
             }
         }
+
+        /* Card section Carousel */
+        :root {
+            /* layout values */
+            --gap: 20px;
+            --card-w: 360px;
+            /* default max width for cards */
+            --card-h: 440px;
+            /* height used for carousel item variant */
+            --edge-padding: 24px;
+            --nav-size: 48px;
+
+            /* visual tokens */
+            --card-radius: 10px;
+            --accent: #333;
+            --muted: #6b7280;
+            --card-bg: #fff;
+            --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+            --frame-bg: #f1f5f9;
+            --fg: #0b1220;
+        }
+
+        /* Generic card (stacked content: media on top, content below) */
+        .card {
+            width: 100%;
+            max-width: var(--card-w);
+            max-height: 100%;
+            background: var(--card-bg);
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid rgba(2, 6, 23, 0.04);
+            display: flex;
+            flex-direction: column;
+            color: var(--fg);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .card .media{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        /* content area */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+            gap: 10px;
+            color: var(--color-fg);
+            padding: 16px 20px;
+        }
+
+        .badge {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            text-transform: capitalize;
+            margin: 0;
+            font-size: 20px;
+            color: var(--fg);
+            /* letter-spacing: 0.2px; */
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .cta {
+            display: inline-block;
+            text-decoration: none;
+            background: #0b1220;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.6px;
+            box-shadow: 0 6px 14px rgba(2, 6, 23, 0.06);
+            align-self: flex-start;
+            border: 2px solid transparent;
+            transition: all .3s ease;
+            text-transform: uppercase;
+        }
+        .cta:hover {
+            background: #fff;
+            color: #0b1220;
+            border: 2px solid #0b1220;
+        }
+
+        /* --- Carousel-specific overrides --- */
+        /* when using the card inside the .carousel, we want fixed size & center layout */
+        .carousel {
+            display: flex;
+            gap: var(--gap);
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 12px var(--edge-padding);
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* carousel items: lock height and make content centered */
+        .carousel .card {
+            flex: 0 0 auto;
+            width: var(--card-w);
+            height: var(--card-h);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+            user-select: none;
+            transform: translateZ(0);
+            transition: transform .28s cubic-bezier(.2, .9, .25, 1), box-shadow .28s;
+            background: linear-gradient(135deg, #f3f4f6, #ffffff);
+            padding: 0;
+            /* carousel variant expects content centered inside */
+        }
+
+        .carousel .card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Small screens tweak */
+        @media (max-width:900px) {
+            :root {
+                --card-w: 260px;
+                --card-h: 180px;
+            }
+
+            .card .media {
+                height: 180px;
+            }
+        }
+
+        @media (max-width:520px) {
+            :root {
+                --card-w: 200px;
+                --card-h: 150px;
+                --nav-size: 40px;
+            }
+
+            .card .media {
+                height: 150px;
+            }
+        }
+
+        /* arrows positioned inside the section for easy reuse */
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: var(--nav-size);
+            height: var(--nav-size);
+            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            background: #ffffff;
+            border: 1px solid rgba(11, 18, 32, 0.06);
+            cursor: pointer;
+            z-index: 40;
+            box-shadow: 0 6px 18px rgba(11, 18, 32, 0.06);
+            transition: transform .12s, box-shadow .12s;
+            border: 1px solid #33333381;
+        }
+
+        .nav:hover {
+            transform: translateY(-50%) scale(1.04);
+            box-shadow: 0 10px 30px rgba(11, 18, 32, 0.08);
+        }
+
+        .nav.left {
+            left: 6px
+        }
+
+        .nav.right {
+            right: 6px
+        }
+
+        .nav svg {
+            width: 20px;
+            height: 20px;
+            color: #0b1220
+        }
+
+        .hint {
+            font-size: 13px;
+            color: #475569;
+            margin-top: 10px
+        }
+
+        /* responsive */
+        @media (max-width:900px) {
+            :root {
+                --card-w: 260px;
+                --card-h: 180px
+            }
+        }
+
+        @media (max-width:520px) {
+            :root {
+                --card-w: 200px;
+                --card-h: 150px;
+                --nav-size: 40px
+            }
+
+            .nav.left {
+                left: 4px
+            }
+
+            .nav.right {
+                right: 4px
+            }
+        }
+
+        /* dragging cursor */
+        .dragging {
+            cursor: grabbing;
+            cursor: -webkit-grabbing
+        }
+
+        /* helper: make carousel focusable for keyboard navigation */
+        .carousel:focus {
+            outline: 2px dashed rgba(11, 18, 32, 0.06);
+            outline-offset: 6px
+        }
+        /* -- */
 
         /* Scroll Reveal Animation Classes */
         .reveal {
@@ -278,9 +534,10 @@
             transform: translateY(6px);
             transition: all .3s ease;
             will-change: opacity, transform;
-            display:block;
-            max-width:100%;
+            display: block;
+            max-width: 100%;
         }
+
         .img.loaded {
             opacity: 1;
             transform: translateY(0);
@@ -561,6 +818,7 @@
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
+            text-transform: capitalize;
         }
 
         .section-header h2 {
@@ -1013,22 +1271,28 @@
                 width: 100%;
                 max-width: 300px;
             }
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
+
             .decorative-dots {
                 display: none;
             }
-            .contact-left, .newsletter-box {
+
+            .contact-left,
+            .newsletter-box {
                 width: 330px;
             }
+
             .newsletter-box {
                 padding: 1rem;
             }
+
             .newsletter-form {
                 flex-direction: column;
             }
-            
+
         }
 
         /* SVG Icons */
