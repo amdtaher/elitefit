@@ -42,7 +42,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="/assets/img/hero.webp" alt="Personal trainer in action" loading="lazy">
+            <img class="img" src="/assets/img/hero.webp" alt="Personal trainer in action" loading="lazy">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -74,7 +74,7 @@
 
             <div class="about-grid">
                 <div class="about-image reveal-left">
-                    <img src="/assets/img/about.webp" alt="Professional trainer" loading="lazy">
+                    <img class="img" src="/assets/img/about.webp" alt="Professional trainer" loading="lazy">
                     <div class="about-badge">
                         <div class="number" data-count="10">0</div>
                         <div class="label">YEARS</div>
@@ -142,7 +142,7 @@
             <div class="services-grid">
                 <div class="service-card stagger-item">
                     <div class="service-image">
-                        <img src="/assets/img/personal.webp" alt="Personal Training" loading="lazy">
+                        <img class="img" src="/assets/img/personal.webp" alt="Personal Training" loading="lazy">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -159,7 +159,7 @@
                 </div>
                 <div class="service-card stagger-item">
                     <div class="service-image">
-                        <img src="/assets/img/group.webp" alt="Group Classes" loading="lazy">
+                        <img class="img" src="/assets/img/group.webp" alt="Group Classes" loading="lazy">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -176,7 +176,7 @@
                 </div>
                 <div class="service-card stagger-item">
                     <div class="service-image">
-                        <img src="/assets/img/online.webp" alt="Online Coaching" loading="lazy">
+                        <img class="img"src="/assets/img/online.webp" alt="Online Coaching" loading="lazy">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -192,7 +192,7 @@
                 </div>
                 <div class="service-card stagger-item">
                     <div class="service-image">
-                        <img src="/assets/img/nutrition.webp" alt="Nutrition Planning" loading="lazy">
+                        <img class="img" src="/assets/img/nutrition.webp" alt="Nutrition Planning" loading="lazy">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -522,6 +522,16 @@
             alert('Successfully subscribed to the newsletter!');
             event.target.reset();
         }
+        // Add .loaded as soon as browser finishes decoding/displaying the image
+        document.querySelectorAll('img.img').forEach(img => {
+            if (img.complete && img.naturalWidth !== 0) {
+            img.classList.add('loaded'); // already cached/loaded
+            } else {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // for cached images in some browsers
+            img.addEventListener('error', ()=> img.classList.add('loaded'));
+            }
+        });
     </script>
 </body>
 
