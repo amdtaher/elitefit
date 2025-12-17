@@ -6,49 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Transform your body and life with expert personal training. Get customized workout plans, nutrition guidance, and dedicated support to achieve your fitness goals." />
-    <title>Elite Personal Training - Transform Your Body</title>
+    <title>ElitFit</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Link to Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav id="nav">
-        <div class="nav-container">
-            <button class="logo" onclick="scrollToSection('hero')">
+    <nav id="nav" class="gsap-fade-up">
+        <div class="nav-container relative">
+            <button class="logo" href="#home" onclick="scrollToSection('hero')">
                 ELITE<span>FIT</span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
-                <li><a href="#services" onclick="scrollToSection('services'); return false;">Services</a></li>
-                <li><a href="#results" onclick="scrollToSection('results'); return false;">Results</a></li>
-                <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
-                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact'); return false;">Get
-                        Started</a></li>
+            <ul class="nav-links hidden md:flex items-center justify-between" id="navLinks">
+                <li><a href="#about" onclick="scrollToSection('about');">About</a></li>
+                <li><a href="#services" onclick="scrollToSection('services');">Services</a></li>
+                <li><a href="#classes" onclick="scrollToSection('classes');">Classes</a></li>
+                <li><a href="#results" onclick="scrollToSection('results');">Results</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact');">Contact</a></li>
+                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact');">Get Started</a></li>
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">
+            <ul class="nav-links mobile-menu flex md:hidden items-start justify-between absolute top-0 right-0 left-0 py-8 px-8">
+                <li><a href="#" class="md:hidden close-btn absolute top-5 right-0 mr-6"><img src="assets/img/close.svg"
+                            alt=""></a></li>
+                <li><a href="#about" onclick="scrollToSection('about');">About</a></li>
+                <li><a href="#services" onclick="scrollToSection('services');">Services</a></li>
+                <li><a href="#classes" onclick="scrollToSection('classes');">Classes</a></li>
+                <li><a href="#results" onclick="scrollToSection('results');">Results</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact');">Contact</a></li>
+                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact');">Get Started</a></li>
+            </ul>
+            <button class="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
+    <!-- X -->
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img class="img" src="/assets/img/hero.webp" alt="Personal trainer in action" loading="lazy">
+            <!-- <img class="img" src="/assets/img/hero.webp" alt="Personal trainer in action"> -->
+            <video class="w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop></video>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>TRANSFORM YOUR BODY.<br>TRANSFORM YOUR LIFE.</h1>
-            <p>Expert personal training designed to help you achieve results you never thought possible.</p>
-            <div class="hero-buttons">
+            <h1 class="gsap-fade-up">TRANSFORM YOUR BODY.<br>TRANSFORM YOUR LIFE.</h1>
+            <p class="gsap-fade-up">Expert personal training designed to help you achieve results you never thought
+                possible.</p>
+            <div class="hero-buttons gsap-fade-up">
                 <button class="btn btn-primary" onclick="scrollToSection('contact')">
                     Start Your Journey →
                 </button>
@@ -58,29 +77,23 @@
             </div>
         </div>
         <div class="scroll-indicator">
-            <div class="scroll-indicator-dot"></div>
+            <img class="w-1/3 md:w-1/2" src="/assets/img/scroll.webp" alt="">
         </div>
     </section>
+    <!-- X -->
 
     <!-- About Section -->
     <section id="about" class="section-bg-white">
         <div class="container">
-            <!-- Decorative dots -->
-            <div class="decorative-dots" style="top: 50px; right: 5%; color: var(--color-primary);">
-                <div class="dot dot-large" style="top: 0; left: 0;"></div>
-                <div class="dot dot-small" style="top: 25px; left: 20px;"></div>
-                <div class="dot dot-medium" style="top: 50px; left: 10px;"></div>
-            </div>
-
             <div class="about-grid">
-                <div class="about-image reveal-left">
+                <div class="about-image fade">
                     <img class="img" src="/assets/img/about.webp" alt="Professional trainer" loading="lazy">
                     <div class="about-badge">
                         <div class="number" data-count="10">0</div>
                         <div class="label">YEARS</div>
                     </div>
                 </div>
-                <div class="about-content reveal-right">
+                <div class="about-content fade">
                     <h2>YOUR SUCCESS IS MY MISSION</h2>
                     <p>With over a decade of experience transforming lives, I specialize in creating personalized
                         fitness programs that deliver real, sustainable results. My approach combines cutting-edge
@@ -123,24 +136,18 @@
             </div>
         </div>
     </section>
+    <!-- X -->
 
     <!-- Services Section -->
     <section id="services" class="section-bg-gray">
         <div class="container">
-            <div class="decorative-line line-horizontal" style="top: 80px; left: 5%; color: var(--color-primary);">
-            </div>
-            <div class="decorative-dots" style="top: 150px; left: 8%; color: var(--color-primary);">
-                <div class="dot dot-small" style="top: 0; left: 0;"></div>
-                <div class="dot dot-small" style="top: 15px; left: 10px;"></div>
-            </div>
-
-            <div class="section-header reveal-up">
+            <div class="section-header fade">
                 <h2>COMPREHENSIVE TRAINING SOLUTIONS</h2>
                 <p>Choose from a range of professional services designed to fit your lifestyle and accelerate your
                     progress.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card stagger-item">
+                <div class="service-card fade">
                     <div class="service-image">
                         <img class="img" src="/assets/img/personal.webp" alt="Personal Training" loading="lazy">
                     </div>
@@ -157,7 +164,7 @@
                         <button class="btn btn-outline">Learn More</button>
                     </div>
                 </div>
-                <div class="service-card stagger-item">
+                <div class="service-card fade">
                     <div class="service-image">
                         <img class="img" src="/assets/img/group.webp" alt="Group Classes" loading="lazy">
                     </div>
@@ -174,7 +181,7 @@
                         <button class="btn btn-outline">Learn More</button>
                     </div>
                 </div>
-                <div class="service-card stagger-item">
+                <div class="service-card fade">
                     <div class="service-image">
                         <img class="img" src="/assets/img/online.webp" alt="Online Coaching" loading="lazy">
                     </div>
@@ -190,7 +197,7 @@
                         <button class="btn btn-outline">Learn More</button>
                     </div>
                 </div>
-                <div class="service-card stagger-item">
+                <div class="service-card fade">
                     <div class="service-image">
                         <img class="img" src="/assets/img/nutrition.webp" alt="Nutrition Planning" loading="lazy">
                     </div>
@@ -210,126 +217,209 @@
             </div>
         </div>
     </section>
+    <!-- X -->
 
-    <!-- Carousel Section -->
-    <section class="carousel-section" aria-label="carousel section">
-        <div class="section-header reveal-up">
+    <!-- Swiper Classes Section -->
+    <section id="classes" class="py-[80px]">
+        <div class="section-header fade">
             <h2>CHECK OUT OUR CLASSES</h2>
-            <p>See what we will teach and train our clients to get bettter build quickly </p>
+            <p>See what we teach and train our clients to build better, faster.</p>
         </div>
-        <div class="carousel-shell">
-            <div class="carousel" id="carousel" tabindex="0">
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/group.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>Push ups</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/nutrition.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">Women</div>
-                        <h3>Sit ups</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+        <div class="swiper fade">
+            <div class="swiper-wrapper">
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/group.webp" alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/online.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>Dumbell pull</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/personal.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>rope hoping</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/online.webp" alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/group.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>Boxing Match</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/nutrition.webp" alt="Person lifting dumbbell">
-                    </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>Push ups</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/nutrition.webp"
+                                alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="media">
-                        <img src="assets//img/online.webp" alt="Person lifting dumbbell">
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/personal.webp"
+                                alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
                     </div>
-                    <div class="content">
-                        <div class="badge">MEN</div>
-                        <h3>muscle build</h3>
-                        <p>Maintain muscle and get results at home with our minimal equipment program that will
-                            challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                </div>
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/group.webp" alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/nutrition.webp"
+                                alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Card -->
+                <div class="swiper-slide">
+                    <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                        <div class="media">
+                            <img class="duration-300 linear" src="assets/img/personal.webp"
+                                alt="Person lifting dumbbell">
+                        </div>
+                        <div class="flex flex-col items-start justify-between p-5 gap-3">
+                            <div class="text-sm font-bold">MEN</div>
+                            <h3 class="text-xl font-semibold">Push ups</h3>
+                            <p class="text-md font-medium text-gray-600">
+                                Maintain muscle and get results at home with our minimal equipment program.
+                            </p>
+                            <a class="cta" href="#">read more</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- arrows (positioned relative to shell so easy to move) -->
-            <button class="nav left" id="prevBtn" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            <button class="nav right" id="nextBtn" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
+    <!-- X -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-bg-gray">
+        <div class="container">
+            <div class="section-header fade">
+                <h2>INVEST IN YOURSELF</h2>
+                <p>Choose the plan that fits your goals and commitment level. All plans include personalized attention
+                    and expert guidance.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card stagger-item">
+                    <h3>Starter</h3>
+                    <div class="pricing-price">
+                        <span class="amount">$99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-description">Perfect for beginners ready to start their fitness journey</p>
+                    <button class="btn">Book Now</button>
+                    <ul class="pricing-features">
+                        <li>4 personal training sessions/month</li>
+                        <li>Basic nutrition guidance</li>
+                        <li>Email support</li>
+                        <li>Access to online resources</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured stagger-item">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Elite</h3>
+                    <div class="pricing-price">
+                        <span class="amount">$199</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-description">Our most popular plan for serious transformations</p>
+                    <button class="btn bg-white text-black">Book Now</button>
+                    <ul class="pricing-features">
+                        <li>8 personal training sessions/month</li>
+                        <li>Custom nutrition plan</li>
+                        <li>Priority support (24/7)</li>
+                        <li>Progress tracking & analysis</li>
+                        <li>Group class access</li>
+                        <li>Supplement recommendations</li>
+                    </ul>
+                </div>
+                <div class="pricing-card stagger-item">
+                    <h3>Champion</h3>
+                    <div class="pricing-price">
+                        <span class="amount">$349</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-description">Ultimate transformation package for peak performance</p>
+                    <button class="btn">Book Now</button>
+                    <ul class="pricing-features">
+                        <li>Unlimited personal training</li>
+                        <li>Advanced nutrition programming</li>
+                        <li>VIP support & accountability</li>
+                        <li>Body composition analysis</li>
+                        <li>Unlimited group classes</li>
+                        <li>Recovery & mobility sessions</li>
+                        <li>Competition prep (if desired)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- X -->
 
     <!-- Testimonials Section -->
     <section id="results" class="section-bg-white">
         <div class="container">
-            <div class="decorative-dots" style="top: 100px; right: 10%; color: var(--color-primary);">
-                <div class="dot dot-medium" style="top: 0; left: 0;"></div>
-                <div class="dot dot-small" style="top: 30px; left: 15px;"></div>
-            </div>
-
-            <div class="section-header reveal-up">
+            <div class="section-header fade">
                 <h2>REAL PEOPLE. REAL RESULTS.</h2>
                 <p>See how our clients have transformed their bodies and lives with dedicated training and support.</p>
             </div>
@@ -380,49 +470,50 @@
             </div>
         </div>
     </section>
+    <!-- X -->
 
-    <!-- CTA Section -->
-    <section class="section-bg-black">
-        <div class="container reveal-up" style="text-align: center; max-width: 900px;">
-            <div class="decorative-dots" style="top: 60px; left: 10%; color: white;">
-                <div class="dot dot-small" style="top: 0; left: 0;"></div>
-                <div class="dot dot-medium" style="top: 20px; left: 15px;"></div>
-            </div>
-            <div class="decorative-dots" style="top: 80px; right: 10%; color: white;">
-                <div class="dot dot-large" style="top: 0; left: 0;"></div>
-                <div class="dot dot-small" style="top: 30px; left: 20px;"></div>
-            </div>
+    <!-- CTA Banner Section -->
+    <section id="cta" class="bg-black py-24 overflow-x-hidden fade">
+        <div class="mx-auto px-4">
+            <div class="mx-auto flex flex-col items-center gap-4 text-center">
+                <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                    READY TO TRANSFORM?
+                </h2>
+                <p class="text-white text-lg sm:text-xl md:text-[1.75rem] font-medium mb-10">
+                    wait another day to start building the body you deserve.
+                    Limited spots available this month.
+                </p>
+                <button onclick="scrollToSection('contact')"
+                    class="bg-white text-black border border-white px-6 md:px-8 py-3 md:py-5 text-sm md:text-lg font-semibold rounded-md transition-all duration-300 hover:bg-transparent hover:text-white">
+                    Start Your Journey Today →
+                </button>
 
-            <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem;">READY TO TRANSFORM?</h2>
-            <p style="font-size: clamp(1.25rem, 3vw, 1.75rem); margin-bottom: 2rem; opacity: 0.9; font-weight: 300;">
-                Don't wait another day to start building the body you deserve. Limited spots available this month.</p>
-            <button class="btn"
-                style="background: white; color: black; border-color: white; padding: 1.25rem 2rem; font-size: 1.125rem;"
-                onclick="scrollToSection('contact')">
-                Start Your Journey Today →
-            </button>
-            <p style="margin-top: 1.5rem; font-size: 0.875rem; opacity: 0.7;">Only 3 spots remaining for this month</p>
+                <p class="mt-6 text-sm text-white/70">
+                    Only 3 spots remaining for this month
+                </p>
+            </div>
         </div>
     </section>
+    <!-- X -->
 
     <!-- Contact Section -->
     <section id="contact" class="section-bg-white">
         <div class="container">
-            <div class="decorative-line line-horizontal" style="top: 100px; right: 5%; color: var(--color-primary);">
-            </div>
-
-            <div class="section-header reveal-up">
+            <div class="section-header fade">
                 <h2>LET'S START YOUR TRANSFORMATION</h2>
                 <p>Ready to take the first step? Fill out the form below and I'll be in touch within 24 hours.</p>
             </div>
-            <div class="contact-grid">
-                <div class="contact-left"
-                    style="background: var(--color-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border);">
-                    <form onsubmit="handleSubmit(event)">
+            <div class="contact-grid fade">
+                <div class="contact-left bg-gray-100 p-10 rounded-lg border-2 border-gray-200">
+                    <form action="https://formspree.io/f/mpzvvdzq" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
+                        <input type="hidden" name="_subject" value="New Training Session Booking">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="john@example.com" required>
@@ -443,6 +534,16 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="preferred_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" name="preferred_time" required>
+                        </div>
+
+                        <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message"
                                 placeholder="Tell me about your fitness journey and what you're looking to achieve..."></textarea>
@@ -451,7 +552,7 @@
                     </form>
                 </div>
                 <div class="contact-right">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Contact Information</h3>
+                    <h3 class="text-2xl mb-8">Contact Information</h3>
                     <a href="mailto:contact@elitefit.com" class="contact-info-item">
                         <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -479,51 +580,122 @@
                         <span>123 Fitness St, Gym City, ST 12345</span>
                     </div>
 
-                    <h3 style="font-size: 1.5rem; margin: 2rem 0 1.5rem;">Follow My Journey</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <svg class="icon-svg" viewBox="0 0 24 24">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <svg class="icon-svg" viewBox="0 0 24 24">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <svg class="icon-svg" viewBox="0 0 24 24">
-                                <path
-                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-                                </path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </a>
-                    </div>
+                    <div class="pt-5 flex flex-col items-start">
+                        <h3 class="text-2xl mb-6">Follow My Journey</h3>
+                        <div class="social-links mb-8">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                    </path>
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                </svg>
+                            </a>
+                        </div>
 
-                    <div class="newsletter-box">
-                        <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Stay Updated</h4>
-                        <p style="font-size: 0.875rem; color: var(--color-muted); margin-bottom: 1rem;">Subscribe to
-                            receive fitness tips, workout ideas, and exclusive offers.</p>
-                        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-                            <input type="email" placeholder="Your email" required>
-                            <button type="submit" class="btn">Subscribe</button>
-                        </form>
+                        <div>
+                            <h3 class="text-2xl mb-6">Contact Me Personally On</h3>
+                            <a href="tel:+4733378901" class="social-link border-transparent hover:bg-white"
+                                aria-label="Whatsapp">
+                                <img src="assets/img/whatsapp-icon.svg" alt="Whatsapp">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <footer class="reveal-up">
-                <div class="logo">ELITE<span>FIT</span></div>
-                <p>© 2024 EliteFit Personal Training. All rights reserved.</p>
-            </footer>
         </div>
     </section>
+    <!-- X -->
 
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-[80px]" aria-label="Blogs section">
+        <div class="container">
+            <div class="section-header fade">
+                <h2>Our Latest Blogs</h2>
+                <p>See what we will teach and train our clients to get bettter build quickly </p>
+            </div>
+            <!-- Blog Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 items-stretch items-start justify-between gap-5 fade">
+                <!-- Single Blog -->
+                <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                    <div class="media">
+                        <img class="duration-300 linear" src="assets//img/group.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="flex flex-col items-start justify-between p-5 gap-3 ">
+                        <div class="badge text-lg font-semibold">MEN</div>
+                        <h3 class="text-2xl font-bold capitalize">How Group Training Works?</h3>
+                        <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
+                            minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <!-- Single Blog -->
+                <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                    <div class="media">
+                        <img class="duration-300 linear" src="assets//img/online.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="flex flex-col items-start justify-between p-5 gap-3">
+                        <div class="badge text-lg font-semibold">MEN</div>
+                        <h3 class="text-2xl font-bold capitalize">what is online training</h3>
+                        <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
+                            minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+                <!-- Single Blog -->
+                <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
+                    <div class="media">
+                        <img class="duration-300 linear" src="assets//img/personal.webp" alt="Person lifting dumbbell">
+                    </div>
+                    <div class="flex flex-col items-start justify-between p-5 gap-3 ">
+                        <div class="badge text-lg font-semibold">MEN</div>
+                        <h3 class="text-2xl font-bold capitalize">How do we train you?</h3>
+                        <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
+                            minimal equipment program that will
+                            challenge you in as little as 30 minutes.</p>
+                        <a class="cta" href="#" role="button">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- X -->
+
+    <!-- Footer -->
+    <footer class="py-10">
+        <div class="logo">ELITE<span>FIT</span></div>
+        <p>© 2025 EliteFit Personal Training. All rights reserved.</p>
+    </footer>
+    <!-- X -->
+
+    <button id="backToTop" aria-label="Back to top"
+        class="z-50 flex items-center justify-center w-12 h-12 rounded-full bg-black text-white shadow-lg opacity-0 pointer-events-none">
+        ↑
+    </button>
+
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- JS -->
     <script src="assets/js/script.js"></script>
 </body>
-
 
 </html>
