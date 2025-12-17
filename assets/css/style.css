@@ -119,8 +119,8 @@
        }
 
        .media {
-           width: 100%;
-           aspect-ratio: 16/9;
+           /* width: 100%;
+           aspect-ratio: 16/9; */
            overflow: hidden;
            border-top-left-radius: 6px;
            border-top-right-radius: 6px;
@@ -1055,4 +1055,5 @@
            stroke-linecap: round;
            stroke-linejoin: round;
        }
+
 
