@@ -198,7 +198,7 @@
        }
 
        .swiper-pagination-bullet-active {
-           background: var(--color-fg);
+           background-color: var(--color-fg) !important;
        }
 
 
@@ -1055,3 +1055,4 @@
            stroke-linecap: round;
            stroke-linejoin: round;
        }
+
