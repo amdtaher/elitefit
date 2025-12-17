@@ -143,6 +143,9 @@ const swiper = new Swiper('.swiper', {
         },
     },
     loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -365,5 +368,6 @@ document.querySelectorAll('img.img').forEach(img => {
 //     // initial layout: center first card
 //     window.addEventListener('load', () => scrollToIndex(0));
 //     window.addEventListener('resize', () => setTimeout(() => scrollToIndex(getCenteredIndex()), 120));
+
 
 // })();
