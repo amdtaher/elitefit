@@ -370,6 +370,4 @@ document.querySelectorAll('img.img').forEach(img => {
 //     window.addEventListener('load', () => scrollToIndex(0));
 //     window.addEventListener('resize', () => setTimeout(() => scrollToIndex(getCenteredIndex()), 120));
 
-
 // })();
-
