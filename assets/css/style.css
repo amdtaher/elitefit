@@ -125,6 +125,10 @@
            border-top-left-radius: 6px;
            border-top-right-radius: 6px;
        }
+       .media img{
+              width: 640px;
+              height: 360px;
+       }
 
        /* Content */
        .content {
@@ -1055,6 +1059,19 @@
            stroke-linecap: round;
            stroke-linejoin: round;
        }
+
+@media (hover: hover) {
+  .service-card:hover .service-image img {
+    transform: scale(1.1);
+  }
+}
+@media (hover: none) {
+  .group:hover .media img {
+    transform: none;
+  }
+}
+
+
 
 
 
