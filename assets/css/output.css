@@ -821,9 +821,6 @@ nav.scrolled {
   background: var(--color-primary) !important;
   color: var(--color-primary-fg) !important;
 }
-.mobile-menu {
-  opacity: 0;
-}
 .menu-toggle {
   display: none;
   background: none;
@@ -1345,9 +1342,8 @@ footer p {
 }
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     right: 0;
     background: var(--card-bg);

@@ -90,43 +90,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 // MOBILE MENU ANIMATION
-document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".mobile-menu");
-    const x = document.querySelector(".close-btn");
-
-    // START HIDDEN (important)
-    gsap.set(menu, { y: "10%", autoAlpha: 0 });
-
-    // CREATE TIMELINE (paused)
-    const menuTl = gsap.timeline({ paused: true });
-
-    menuTl.to(menu, {
-        y: "0%",
-        autoAlpha: 1,
-        duration: 0.4,
-        pointerEvents: "auto",
-        duration: 0.35,
-        ease: "power2.out"
-    });
-
-    // TOGGLE ON CLICK
-    let isOpen = false;
-
-    menuBtn.addEventListener("click", () => {
-        if (!isOpen) {
-            menuTl.play();
-        } else {
-            menuTl.reverse();
-        }
-        isOpen = !isOpen;
-    });
-    x.addEventListener("click", () => {
-        menuTl.reverse();
-        isOpen = false;
-        return;
-    });
+gsap.set(".mobile-menu", {
+  autoAlpha: 0,
+  y: -20,
+  pointerEvents: "none"
 });
+
+const menuBtn = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-btn");
+
+const menuTl = gsap.timeline({ paused: true });
+
+menuTl.to(menu, {
+  autoAlpha: 1,
+  y: 0,
+  pointerEvents: "auto",
+  duration: 0.35,
+  ease: "power2.out"
+});
+
+let isOpen = false;
+
+menuBtn.addEventListener("click", () => {
+  isOpen ? menuTl.reverse() : menuTl.play();
+  isOpen = !isOpen;
+});
+
+closeBtn.addEventListener("click", () => {
+  menuTl.reverse();
+  isOpen = false;
+});
+
 
 // STAT COUNT ANIMATION
 gsap.registerPlugin(ScrollTrigger);

@@ -1,5 +1,5 @@
        @import "tailwindcss";
-       
+
        #backToTop {
            position: fixed;
            bottom: 20px;
@@ -325,10 +325,6 @@
        .btn-outline:hover {
            background: var(--color-primary) !important;
            color: var(--color-primary-fg) !important;
-       }
-
-       .mobile-menu {
-           opacity: 0;
        }
 
        .menu-toggle {
@@ -975,8 +971,13 @@
        }
 
        @media (max-width: 768px) {
+
+           .mobile-menu {
+               opacity: 0;
+           }
+
            .nav-links {
-               display: none;
+               /* display: none; */
                position: absolute;
                top: 100%;
                left: 0;
