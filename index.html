@@ -28,27 +28,27 @@
     <!-- Navigation -->
     <nav id="nav" class="gsap-fade-up">
         <div class="nav-container relative">
-            <button class="logo" href="#hero" onclick="scrollToSection('hero')">
+            <a href="#hero" class="logo">
                 ELITE<span>FIT</span>
-            </button>
+            </a>
             <ul class="nav-links hidden md:flex items-center justify-between" id="navLinks">
-                <li><a href="#about" onclick="scrollToSection('about');">About</a></li>
-                <li><a href="#services" onclick="scrollToSection('services');">Services</a></li>
-                <li><a href="#classes" onclick="scrollToSection('classes');">Classes</a></li>
-                <li><a href="#results" onclick="scrollToSection('results');">Results</a></li>
-                <li><a href="#contact" onclick="scrollToSection('contact');">Contact</a></li>
-                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact');">Get Started</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn get-btn">Get Started</a></li>
             </ul>
             <ul
                 class="nav-links mobile-menu flex md:hidden items-start justify-between absolute top-0 right-0 left-0 py-8 px-8">
                 <li><button class="md:hidden close-btn absolute top-5 right-0 mr-6"><img src="assets/img/close.svg"
                             alt=""></button></li>
-                <li><a href="#about" onclick="scrollToSection('about');">About</a></li>
-                <li><a href="#services" onclick="scrollToSection('services');">Services</a></li>
-                <li><a href="#classes" onclick="scrollToSection('classes');">Classes</a></li>
-                <li><a href="#results" onclick="scrollToSection('results');">Results</a></li>
-                <li><a href="#contact" onclick="scrollToSection('contact');">Contact</a></li>
-                <li><a href="#contact" class="btn get-btn" onclick="scrollToSection('contact');">Get Started</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn get-btn">Get Started</a></li>
             </ul>
             <button class="menu-toggle">
                 <span></span>
@@ -69,7 +69,8 @@
         <div class="relative flex flex-col items-center justify-between gap-6 text-center text-white px-6 z-10">
             <h1 class="text-[clamp(2.5rem,8vw,4.5rem)] leading-[1.1]">TRANSFORM YOUR
                 BODY.<br>TRANSFORM YOUR LIFE.</h1>
-            <p class="text-[clamp(1rem,3vw,1.5rem)] opacity-[0.95] font-light max-w-200 m-auto text-center">Expert personal training designed to
+            <p class="text-[clamp(1rem,3vw,1.5rem)] opacity-[0.95] font-light max-w-200 m-auto text-center">Expert
+                personal training designed to
                 help you achieve results you never thought
                 possible.</p>
             <div class="hero-buttons gsap-fade-up">
@@ -484,7 +485,7 @@
     <!-- CTA Banner Section -->
     <section id="cta" class="bg-black py-24 overflow-x-hidden fade">
         <div class="mx-auto px-4">
-            <div class="mx-auto flex flex-col items-center gap-4 text-center">
+            <div class="mx-auto flex flex-col items-center justify-between gap-4 text-center">
                 <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
                     READY TO TRANSFORM?
                 </h2>
@@ -492,10 +493,9 @@
                     wait another day to start building the body you deserve.
                     Limited spots available this month.
                 </p>
-                <button onclick="scrollToSection('contact')"
-                    class="bg-white text-black border border-white px-6 md:px-8 py-3 md:py-5 text-sm md:text-lg font-semibold rounded-md transition-all duration-300 hover:bg-transparent hover:text-white">
+                <a href="#contact" class="text-black bg-white px-5 md:px-8 py-6 rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
                     Start Your Journey Today →
-                </button>
+                </a>
 
                 <p class="mt-6 text-sm text-white/70">
                     Only 3 spots remaining for this month
@@ -557,7 +557,7 @@
                             <textarea id="message" name="message"
                                 placeholder="Tell me about your fitness journey and what you're looking to achieve..."></textarea>
                         </div>
-                        <button type="submit" class="btn" style="width: 100%;" onclick="handleNewsletter()">Send
+                        <button type="submit" class="btn" style="width: 100%;">Send
                             Message</button>
                     </form>
                 </div>
