@@ -142,7 +142,10 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 4,
         },
     },
-    loop: true,
+    loop: false,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -158,36 +161,36 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, observerOptions);
+// const observer = new IntersectionObserver(function (entries) {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('active');
+//         }
+//     });
+// }, observerOptions);
 
 // Observe all reveal elements
 document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .pricing-card').forEach(el => {
     observer.observe(el);
 });
 
-// Stagger animation for grid items
-const staggerObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll('.stagger-item');
-            items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.add('active');
-                }, index * 100);
-            });
-            staggerObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+// // Stagger animation for grid items
+// const staggerObserver = new IntersectionObserver(function (entries) {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             const items = entry.target.querySelectorAll('.stagger-item');
+//             items.forEach((item, index) => {
+//                 setTimeout(() => {
+//                     item.classList.add('active');
+//                 }, index * 100);
+//             });
+//             staggerObserver.unobserve(entry.target);
+//         }
+//     });
+// }, observerOptions);
 
 // Observe sections with stagger items
-document.querySelectorAll('.stats-grid, .services-grid, .testimonials-grid').forEach(el => {
+document.querySelectorAll('.stats-grid, .testimonials-grid').forEach(el => {
     staggerObserver.observe(el);
 });
 
@@ -371,3 +374,4 @@ document.querySelectorAll('img.img').forEach(img => {
 //     window.addEventListener('resize', () => setTimeout(() => scrollToIndex(getCenteredIndex()), 120));
 
 // })();
+
