@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // MOBILE MENU ANIMATION
 gsap.set(".mobile-menu", {
-  autoAlpha: 0,
-  y: -20,
-  pointerEvents: "none"
+    autoAlpha: 0,
+    y: -20,
+    pointerEvents: "none"
 });
 
 const menuBtn = document.querySelector(".menu-toggle");
@@ -103,24 +103,35 @@ const closeBtn = document.querySelector(".close-btn");
 const menuTl = gsap.timeline({ paused: true });
 
 menuTl.to(menu, {
-  autoAlpha: 1,
-  y: 0,
-  pointerEvents: "auto",
-  duration: 0.35,
-  ease: "power2.out"
+    autoAlpha: 1,
+    y: 0,
+    pointerEvents: "auto",
+    duration: 0.35,
+    ease: "power2.out"
 });
 
 let isOpen = false;
 
 menuBtn.addEventListener("click", () => {
-  isOpen ? menuTl.reverse() : menuTl.play();
-  isOpen = !isOpen;
+    isOpen ? menuTl.reverse() : menuTl.play();
+    isOpen = !isOpen;
 });
 
 closeBtn.addEventListener("click", () => {
-  menuTl.reverse();
-  isOpen = false;
+    menuTl.reverse();
+    isOpen = false;
 });
+
+// AUTO-CLOSE MOBILE MENU ON LINK CLICK
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        if (isOpen) {
+            menuTl.reverse();   // close menu
+            isOpen = false;
+        }
+    });
+});
+
 
 
 // STAT COUNT ANIMATION
@@ -167,8 +178,8 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 4,
         },
     },
-  preloadImages: true,     // 🔑
-  lazy: false,             // 🔑
+    preloadImages: true,     // 🔑
+    lazy: false,             // 🔑
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
