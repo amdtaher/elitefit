@@ -63,7 +63,8 @@
     <section class="hero" id="hero">
         <div class="hero-bg">
             <img class="img md:hidden" src="/assets/img/hero.webp" alt="Personal trainer in action">
-            <video class="hidden md:block w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg"></video>
+            <video class="hidden md:block w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop
+                playsinline preload="metadata" poster="assets/img/hero-poster.jpg"></video>
         </div>
         <div class="hero-overlay"></div>
         <div class="relative flex flex-col items-center justify-between gap-6 text-center text-white px-6 z-10">
@@ -736,7 +737,7 @@
                 <p>Ready to take the first step? Fill out the form below and I'll be in touch within 24 hours.</p>
             </div>
             <div class="contact-grid fade">
-                <div class="contact-left bg-gray-100 p-5 md:p-10 rounded-lg border-2 border-gray-200">
+                <div class="md:contact-left bg-gray-100 p-5 md:p-10 rounded-lg border-2 border-gray-200">
                     <form action="https://formspree.io/f/mpzvvdzq" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -765,16 +766,17 @@
                                 <option value="general">General Fitness</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="date">Preferred Date</label>
-                            <input type="date" id="date" name="preferred_date" required>
-                        </div>
+                        <div class="grid grid-cols-2 items-center justify-between gap-5">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" name="preferred_date" required>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="time">Preferred Time</label>
-                            <input type="time" id="time" name="preferred_time" required>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <input type="time" id="time" name="preferred_time" required>
+                            </div>
                         </div>
-
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message"
@@ -785,7 +787,7 @@
                     </form>
                 </div>
                 <div class="contact-right">
-                    <h3 class="text-2xl mb-8">Contact Information</h3>
+                    <h3 class="text-2xl mb-5 md:mb-8">Contact Information</h3>
                     <a href="mailto:contact@elitefit.com" class="contact-info-item">
                         <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -814,7 +816,7 @@
                     </div>
 
                     <div class="pt-5 flex flex-col items-start">
-                        <h3 class="text-2xl mb-6">Follow My Journey</h3>
+                        <h3 class="text-2xl mb-5 md:mb-8">Follow My Journey</h3>
                         <div class="social-links mb-8">
                             <a href="#" class="social-link" aria-label="Instagram">
                                 <svg class="icon-svg" viewBox="0 0 24 24">
