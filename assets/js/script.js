@@ -1,13 +1,3 @@
-const nav = document.getElementById("nav");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        nav.classList.add("scrolled");
-    } else {
-        nav.classList.remove("scrolled");
-    }
-});
-
 // GSAP ANIMATIONS
 document.addEventListener("DOMContentLoaded", () => {
     // REGISTER GSAP PLUGINS
@@ -132,8 +122,6 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
     });
 });
 
-
-
 // STAT COUNT ANIMATION
 gsap.registerPlugin(ScrollTrigger);
 
@@ -162,6 +150,7 @@ document.querySelectorAll(".stat-value[data-count]").forEach(el => {
         }
     );
 });
+// --X--
 
 // Swiper carousel initialization
 const swiper = new Swiper('.swiper', {
@@ -188,4 +177,53 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+});
+// --X--
+
+// Navbar Visible on Scroll
+const nav = document.getElementById("nav");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
+
+// Read more Button
+function toggleServiceText(btn) {
+    const text = btn.previousElementSibling;
+
+    const shortText = text.getAttribute("data-short");
+    const fullText = text.getAttribute("data-full");
+
+    const expanded = btn.textContent === "Show Less «";
+
+    text.textContent = expanded ? shortText : fullText;
+    btn.textContent = expanded ? "read more »" : "Show Less «";
+}
+
+// QNA Show more
+document.querySelectorAll(".faq-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".faq-icon");
+
+        document.querySelectorAll(".faq-item").forEach((i) => {
+            if (i !== item) {
+                i.querySelector(".faq-content").style.maxHeight = null;
+                i.querySelector(".faq-icon").style.transform = "rotate(0deg)";
+            }
+        });
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.style.transform = "rotate(0deg)";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
+        }
+    });
 });

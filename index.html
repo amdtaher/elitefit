@@ -46,7 +46,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#classes">Classes</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#contact" class="btn get-btn">Get Started</a></li>
             </ul>
@@ -62,14 +62,16 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <!-- <img class="img" src="/assets/img/hero.webp" alt="Personal trainer in action"> -->
-            <video class="w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop></video>
+            <img class="img md:hidden" src="/assets/img/hero.webp" alt="Personal trainer in action">
+            <video class="hidden md:block w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg"></video>
         </div>
         <div class="hero-overlay"></div>
         <div class="relative flex flex-col items-center justify-between gap-6 text-center text-white px-6 z-10">
             <h1 class="gsap-fade-up text-[clamp(2.5rem,8vw,4.5rem)] leading-[1.1]">TRANSFORM YOUR
                 BODY.<br>TRANSFORM YOUR LIFE.</h1>
-            <p class="gsap-fade-up text-[clamp(1rem,3vw,1.5rem)] opacity-[0.95] font-light max-w-200 m-auto text-center">Expert
+            <p
+                class="gsap-fade-up text-[clamp(1rem,3vw,1.5rem)] opacity-[0.95] font-light max-w-200 m-auto text-center">
+                Expert
                 personal training designed to
                 help you achieve results you never thought
                 possible.</p>
@@ -89,17 +91,21 @@
     <!-- X -->
 
     <!-- About Section -->
-    <section id="about" class="section-bg-white">
+    <section id="about" class="bg-white">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image fade">
-                    <img class="img" src="/assets/img/about.webp" alt="Professional trainer" loading="lazy">
+                    <img class="img" src="/assets/img/about-m.jpg" alt="Professional trainer" loading="eager">
                     <div class="about-badge">
                         <div class="stat-value" data-count="9">0</div>
                         <div class="label">YEARS</div>
                     </div>
                 </div>
                 <div class="about-content fade">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
+                        about
+                    </span>
                     <h2>YOUR SUCCESS IS MY MISSION</h2>
                     <p>With over a decade of experience transforming lives, I specialize in creating personalized
                         fitness programs that deliver real, sustainable results. My approach combines cutting-edge
@@ -109,8 +115,7 @@
 
                     <div class="stats-grid">
                         <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <path d="M12 6v6l4 2"></path>
                             </svg>
@@ -118,8 +123,7 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -129,13 +133,110 @@
                             <div class="stat-label">Clients Transformed</div>
                         </div>
                         <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
                                 <circle cx="12" cy="8" r="7"></circle>
                                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                             </svg>
                             <div class="stat-value" data-count="15">0</div>
                             <div class="stat-label">Certifications Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-left">
+                <!-- About Image -->
+                <div class="order-1 md:order-2 about-image fade grid grid-cols-2 gap-2 md:gap-4">
+                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about-f.jpg"
+                        alt="Professional trainer" loading="lazy">
+                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/hero.webp"
+                        alt="Professional trainer" loading="lazy">
+                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about-m.jpg"
+                        alt="Professional trainer" loading="lazy">
+                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about.webp"
+                        alt="Professional trainer" loading="lazy">
+                </div>
+                <!-- About Content -->
+                <div class="order-2 md:order-1 about-content fade">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
+                        ?why us
+                    </span>
+                    <h2>ABOUT ME AND MY JOERNEY TILL HERE</h2>
+                    <p>With over a decade of experience transforming lives, I specialize in creating personalized
+                        fitness programs that deliver real, sustainable results. My approach combines cutting-edge
+                        training techniques with proven nutrition strategies to help you reach your full potential.</p>
+                    <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
+                        here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4">
+                        <!-- Icon -->
+                        <div class="shrink-0">
+                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                <!-- Lightning / Energy -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                Fast and reliable
+                            </h4>
+                            <p>
+                                Proin et convallis tincidunt tincidunt. Viverra ut
+                                ullamcorp faucibus dictum. Integer in egestas volutpat.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4">
+                        <!-- Icon -->
+                        <div class="shrink-0">
+                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                <!-- Dumbbell / Strength -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 15v-3m16 3v-3M7 18V6m10 12V6M2 12h20" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                Endurance training
+                            </h4>
+                            <p>
+                                Proin et convallis tincidunt tincidunt. Viverra ut
+                                ullamcorp faucibus dictum. Integer in egestas volutpat.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4">
+                        <!-- Icon -->
+                        <div class="shrink-0">
+                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                <!-- Heart / Endurance -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                Fit and Healthy
+                            </h4>
+                            <p>
+                                Proin et convallis tincidunt tincidunt. Viverra ut
+                                ullamcorp faucibus dictum. Integer in egestas volutpat.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -148,6 +249,10 @@
     <section id="services" class="section-bg-gray">
         <div class="container">
             <div class="section-header fade">
+                <span
+                    class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2.5">
+                    services
+                </span>
                 <h2>COMPREHENSIVE TRAINING SOLUTIONS</h2>
                 <p>Choose from a range of professional services designed to fit your lifestyle and accelerate your
                     progress.</p>
@@ -228,6 +333,10 @@
     <!-- Swiper Classes Section -->
     <section id="classes" class="py-20">
         <div class="section-header fade">
+            <span
+                class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold mb-2.5 capitalize">
+                classes
+            </span>
             <h2>CHECK OUT OUR CLASSES</h2>
             <p>See what we teach and train our clients to build better, faster.</p>
         </div>
@@ -243,10 +352,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -260,10 +372,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -277,10 +392,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -294,10 +412,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -311,10 +432,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -328,10 +452,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -345,10 +472,13 @@
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
                             <h3 class="text-xl font-semibold">Push ups</h3>
-                            <p class="text-md font-medium text-gray-600">
-                                Maintain muscle and get results at home with our minimal equipment program.
+                            <p class="text-md font-medium text-gray-600"
+                                data-short="Maintain muscle and get results at home with our minimal equipment program. Also something need..."
+                                data-full="Maintain muscle and get results at home with our minimal equipment program. Also something need to be bothering you i know that because that's why why have clicked on read more.">
+                                Maintain muscle and get results at home with our minimal equipment program. Also
+                                something need...
                             </p>
-                            <a class="cta" href="#">read more</a>
+                            <button class="cta" onclick="toggleServiceText(this)">read more »</button>
                         </div>
                     </div>
                 </div>
@@ -365,6 +495,10 @@
     <section id="pricing" class="section-bg-gray">
         <div class="container">
             <div class="section-header fade">
+                <span
+                    class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2.5">
+                    prices
+                </span>
                 <h2>INVEST IN YOURSELF</h2>
                 <p>Choose the plan that fits your goals and commitment level. All plans include personalized attention
                     and expert guidance.</p>
@@ -393,7 +527,7 @@
                         <span class="period">/month</span>
                     </div>
                     <p class="pricing-description">Our most popular plan for serious transformations</p>
-                    <button class="btn bg-white text-black">Book Now</button>
+                    <button class="btn bg-white text-black border border-white!">Book Now</button>
                     <ul class="pricing-features">
                         <li>8 personal training sessions/month</li>
                         <li>Custom nutrition plan</li>
@@ -427,9 +561,13 @@
     <!-- X -->
 
     <!-- Testimonials Section -->
-    <section id="results" class="section-bg-white">
+    <section id="reviews" class="section-bg-white">
         <div class="container">
             <div class="section-header fade">
+                <span
+                    class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2.5">
+                    reviews
+                </span>
                 <h2>REAL PEOPLE. REAL RESULTS.</h2>
                 <p>See how our clients have transformed their bodies and lives with dedicated training and support.</p>
             </div>
@@ -483,7 +621,7 @@
     <!-- X -->
 
     <!-- CTA Banner Section -->
-    <section id="cta" class="bg-black py-24 overflow-x-hidden fade">
+    <section id="cta" class="top bg-black py-24 overflow-x-hidden fade">
         <div class="mx-auto px-4">
             <div class="mx-auto flex flex-col items-center justify-between gap-4 text-center">
                 <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
@@ -494,7 +632,7 @@
                     Limited spots available this month.
                 </p>
                 <a href="#contact"
-                    class="text-black bg-white px-5 md:px-8 py-6 rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                    class="text-black bg-white px-5 md:px-8 py-6 rounded-lg text-lg font-semibold border-2 hover:bg-black hover:text-white transition duration-300">
                     Start Your Journey Today →
                 </a>
 
@@ -506,10 +644,94 @@
     </section>
     <!-- X -->
 
+    <!-- FAQ Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-3xl mx-auto px-4">
+
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 tracking-wide">
+                FREQUENTLY ASKED QUESTIONS
+            </h2>
+
+            <div class="space-y-4">
+
+                <!-- FAQ ITEM -->
+                <div class="faq-item bg-white rounded-lg shadow-sm">
+                    <button class="faq-btn w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer">
+                        <span class="font-semibold text-lg">
+                            How do I reset my password?
+                        </span>
+                        <span class="faq-icon transition-transform duration-300 text-2xl">▾</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="pb-5 text-gray-600">
+                            You can reset your password by clicking the “Forgot Password” link on the login page and
+                            following the instructions sent to your email.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ ITEM -->
+                <div class="faq-item bg-white rounded-lg shadow-sm">
+                    <button class="faq-btn w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer">
+                        <span class="font-semibold text-lg">
+                            How do the workouts work on the platform?
+                        </span>
+                        <span class="faq-icon transition-transform duration-300 text-2xl">▾</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="pb-5 text-gray-600">
+                            Workouts are guided video sessions designed to be followed at home or in the gym, with
+                            progress tracking and scheduling built in.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ ITEM -->
+                <div class="faq-item bg-white rounded-lg shadow-sm">
+                    <button class="faq-btn w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer">
+                        <span class="font-semibold text-lg">
+                            What equipment will I need?
+                        </span>
+                        <span class="faq-icon transition-transform duration-300 text-2xl">▾</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="pb-5 text-gray-600">
+                            Most workouts require minimal equipment like dumbbells or resistance bands. Equipment
+                            requirements are listed before each workout.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ ITEM -->
+                <div class="faq-item bg-white rounded-lg shadow-sm">
+                    <button class="faq-btn w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer">
+                        <span class="font-semibold text-lg">
+                            Do you offer nutrition guidance?
+                        </span>
+                        <span class="faq-icon transition-transform duration-300 text-2xl">▾</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="pb-5 text-gray-600">
+                            Yes. We provide nutrition plans and general guidance tailored to your fitness goals and
+                            lifestyle.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- --X -->
+
+
     <!-- Contact Section -->
     <section id="contact" class="section-bg-white">
         <div class="container">
             <div class="section-header fade">
+                <span
+                    class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2.5">
+                    contact
+                </span>
                 <h2>LET'S START YOUR TRANSFORMATION</h2>
                 <p>Ready to take the first step? Fill out the form below and I'll be in touch within 24 hours.</p>
             </div>
@@ -636,14 +858,18 @@
     <!-- X -->
 
     <!-- Blogs Section -->
-    <section id="blogs" class="py-[80px]" aria-label="Blogs section">
+    <section id="blogs" class="py-20 bg-[#fafafa]" aria-label="Blogs section">
         <div class="container">
             <div class="section-header fade">
+                <span
+                    class="inline-block px-8 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2.5">
+                    blogs
+                </span>
                 <h2>Our Latest Blogs</h2>
                 <p>See what we will teach and train our clients to get bettter build quickly </p>
             </div>
             <!-- Blog Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 items-stretch items-start justify-between gap-5 fade">
+            <div class="grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-5 fade">
                 <!-- Single Blog -->
                 <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                     <div class="media">
@@ -655,7 +881,7 @@
                         <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
                             minimal equipment program that will
                             challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                        <a class="cta" href="#" role="button">read more »</a>
                     </div>
                 </div>
                 <!-- Single Blog -->
@@ -669,7 +895,7 @@
                         <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
                             minimal equipment program that will
                             challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                        <a class="cta" href="#" role="button">read more »</a>
                     </div>
                 </div>
                 <!-- Single Blog -->
@@ -683,7 +909,7 @@
                         <p class="text-md font-semibold text-gray-700">Maintain muscle and get results at home with our
                             minimal equipment program that will
                             challenge you in as little as 30 minutes.</p>
-                        <a class="cta" href="#" role="button">read more</a>
+                        <a class="cta" href="#" role="button">read more »</a>
                     </div>
                 </div>
             </div>
@@ -692,9 +918,62 @@
     <!-- X -->
 
     <!-- Footer -->
-    <footer class="py-10">
-        <div class="logo">ELITE<span>FIT</span></div>
-        <p>© 2025 EliteFit Personal Training. All rights reserved.</p>
+    <footer class="bg-black text-gray-300 pt-30">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- TOP GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800 text-left">
+                <!-- BRAND -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-extrabold text-white mb-4 uppercase">
+                        elite<span class="text-orange-500">fit</span>
+                    </h3>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Helping you build strength, confidence, and discipline through
+                        structured training and real results.
+                    </p>
+                </div>
+                <!-- QUICK LINKS -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-orange-500 transition">About Me</a></li>
+                        <li><a href="#services" class="hover:text-orange-500 transition">Services</a></li>
+                        <li><a href="#reviews" class="hover:text-orange-500 transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-orange-500 transition">Contact Me</a></li>
+                    </ul>
+                </div>
+                <!-- SERVICES -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Training</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Personal Training</li>
+                        <li>Group Classes</li>
+                        <li>Home Workouts</li>
+                        <li>Nutrition Guidance</li>
+                    </ul>
+                </div>
+                <!-- CTA / CONTACT -->
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold text-white mb-4">Get Started</h4>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Ready to transform your body and mindset?
+                    </p>
+                    <a href="#contact"
+                        class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-orange-400 transition">
+                        Book a Session →
+                    </a>
+                </div>
+            </div>
+            <!-- BOTTOM BAR -->
+            <div class="flex flex-col md:flex-row items-center justify-between py-6 text-sm text-gray-500">
+                <p>© 2025 TrainHard. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-orange-500 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-orange-500 transition">Terms</a>
+                </div>
+            </div>
+
+        </div>
     </footer>
     <!-- X -->
 

@@ -151,24 +151,34 @@
        }
 
        /* CTA */
+       .top {
+           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+       }
+
+       .bottom {
+           clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+           margin-top: -40px;
+       }
+
        .cta {
            margin-top: 10px;
            align-self: flex-start;
            text-decoration: none;
-           background: #0b1220;
-           color: #fff;
-           padding: 12px 18px;
+           background: var(--card-bg);
+           color: var(--color-fg);
+           padding: 8px 20px;
            border-radius: 4px;
-           font-size: 13px;
+           font-size: 14px;
            font-weight: 700;
            text-transform: uppercase;
            transition: all 0.3s ease;
-           border: 2px solid transparent;
+           border: 2px solid var(--color-fg);
+            cursor: pointer;
        }
 
        .cta:hover {
-           background: #fff;
-           color: #0b1220;
+           background: var(--color-fg);
+           color: var(--card-bg);
            border: 2px solid #0b1220;
        }
 
@@ -176,7 +186,7 @@
        .swiper {
            max-width: 1280px;
            width: 100%;
-           min-height: 460px;
+           min-height: 560px;
            height: auto;
        }
 
@@ -217,7 +227,7 @@
            transform: translateY(6px);
            transition: all .3s ease;
            will-change: opacity, transform;
-           display: block;
+           /* display: block; */
            max-width: 100%;
        }
 
@@ -286,7 +296,7 @@
        }
 
        .nav-links a:hover {
-           color: var(--color-primary);
+           color: #ff6900;
            transform: translateY(-2px);
        }
 
@@ -500,6 +510,12 @@
            grid-template-columns: 1fr 1fr;
            gap: 4rem;
            align-items: center;
+           margin-bottom: 4rem;
+       }
+
+       .about-grid-reverse {
+           direction: rtl;
+           text-align: left;
        }
 
        .about-image {
@@ -915,8 +931,9 @@
            border-color: var(--color-primary);
            transform: translateY(-3px) rotate(5deg);
        }
+
        .whatsapp svg:hover {
-            stroke: var(--color-bg);
+           stroke: var(--color-bg);
        }
 
        /* Footer */
@@ -933,7 +950,7 @@
        }
 
        footer p {
-           color: var(--color-muted);
+           /* color: var(--color-muted); */
            font-size: 0.875rem;
        }
 
