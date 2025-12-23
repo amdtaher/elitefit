@@ -37,7 +37,7 @@
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="btn get-btn">Get Started</a></li>
+                <li><a href="#contact" class="btn get-btn">Book Session</a></li>
             </ul>
             <ul
                 class="nav-links mobile-menu flex md:hidden items-start justify-between absolute top-0 right-0 left-0 py-8 px-8">
@@ -61,15 +61,20 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-bg">
-            <img class="img md:hidden" src="/assets/img/hero.webp" alt="Personal trainer in action">
-            <video class="hidden md:block w-full h-full object-cover" src="assets/img/hero.mp4" autoplay muted loop
-                playsinline preload="metadata" poster="assets/img/hero-poster.jpg"></video>
+        <div class="hero-bg absolute inset-0 z-0">
+            <img class="img md:hidden w-full h-full object-cover" src="/assets/img/hero.webp"
+                alt="Personal trainer hero" loading="eager" fetchpriority="high">
+
+            <video class="hidden md:block w-full h-full object-cover" autoplay muted loop playsinline
+                preload="metadata">
+                <source src="assets/img/hero.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="relative flex flex-col items-center justify-between gap-6 text-center text-white px-6 z-10">
             <h1 class="gsap-fade-up text-[clamp(2.5rem,8vw,4.5rem)] leading-[1.1]">TRANSFORM YOUR
-                <span class="text-orange-500">BODY.</span><br>TRANSFORM YOUR <span class="text-orange-500">LIFE.</span></h1>
+                <span class="text-orange-500">BODY.</span><br>TRANSFORM YOUR <span class="text-orange-500">LIFE.</span>
+            </h1>
             <p
                 class="gsap-fade-up text-[clamp(1rem,3vw,1.5rem)] opacity-[0.95] font-light max-w-200 m-auto text-center">
                 Expert
@@ -94,150 +99,152 @@
     <!-- About Section -->
     <section id="about" class="bg-white">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image fade">
-                    <img class="img" src="/assets/img/about-m.jpg" alt="Professional trainer" loading="eager">
-                    <div class="about-badge">
-                        <div class="stat-value" data-count="9">0</div>
-                        <div class="label">YEARS</div>
+            <div class="flex flex-col gap-10">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="/assets/img/about-m.webp" alt="Professional trainer" width="400" height="533" loading="lazy">
+                        <div class="about-badge">
+                            <div class="stat-value" data-count="9">0</div>
+                            <div class="label">YEARS</div>
+                        </div>
                     </div>
-                </div>
-                <div class="about-content fade">
-                    <span
-                        class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
-                        about
-                    </span>
-                    <h2>YOUR SUCCESS IS MY MISSION</h2>
-                    <p>With over a decade of experience transforming lives, I specialize in creating personalized
-                        fitness programs that deliver real, sustainable results. My approach combines cutting-edge
-                        training techniques with proven nutrition strategies to help you reach your full potential.</p>
-                    <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
-                        here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
+                    <div class="about-content fade">
+                        <span
+                            class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
+                            about
+                        </span>
+                        <h2>YOUR SUCCESS IS MY MISSION</h2>
+                        <p>With over a decade of experience transforming lives, I specialize in creating personalized
+                            fitness programs that deliver real, sustainable results. My approach combines cutting-edge
+                            training techniques with proven nutrition strategies to help you reach your full potential.</p>
+                        <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
+                            here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
 
-                    <div class="stats-grid">
-                        <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M12 6v6l4 2"></path>
-                            </svg>
-                            <div class="stat-value" data-count="11">0</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <div class="stat-value" data-count="500">0</div>
-                            <div class="stat-label">Clients Transformed</div>
-                        </div>
-                        <div class="stat ">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                            <div class="stat-value" data-count="15">0</div>
-                            <div class="stat-label">Certifications Completed</div>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <div class="stat-value" data-count="11">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat ">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <div class="stat-value" data-count="500">0</div>
+                                <div class="stat-label">Clients Transformed</div>
+                            </div>
+                            <div class="stat ">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <div class="stat-value" data-count="15">0</div>
+                                <div class="stat-label">Certifications Completed</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-left">
-                <!-- About Image -->
-                <div class="order-1 md:order-2 about-image fade grid grid-cols-2 gap-2 md:gap-4">
-                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about-f.jpg"
-                        alt="Professional trainer" loading="lazy">
-                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/hero.webp"
-                        alt="Professional trainer" loading="lazy">
-                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about-m.jpg"
-                        alt="Professional trainer" loading="lazy">
-                    <img class="img rounded-xl object-cover w-full h-full" src="/assets/img/about.webp"
-                        alt="Professional trainer" loading="lazy">
-                </div>
-                <!-- About Content -->
-                <div class="order-2 md:order-1 about-content fade">
-                    <span
-                        class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
-                        ?why us
-                    </span>
-                    <h2>ABOUT ME AND MY JOERNEY TILL HERE</h2>
-                    <p>With over a decade of experience transforming lives, I specialize in creating personalized
-                        fitness programs that deliver real, sustainable results. My approach combines cutting-edge
-                        training techniques with proven nutrition strategies to help you reach your full potential.</p>
-                    <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
-                        here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
-                    <!-- Feature Item -->
-                    <div class="flex items-start gap-4">
-                        <!-- Icon -->
-                        <div class="shrink-0">
-                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
-                                <!-- Lightning / Energy -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <!-- Text -->
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
-                                Fast and reliable
-                            </h4>
-                            <p>
-                                Proin et convallis tincidunt tincidunt. Viverra ut
-                                ullamcorp faucibus dictum. Integer in egestas volutpat.
-                            </p>
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-left">
+                    <!-- About Image -->
+                    <div class="order-1 md:order-2 about-image grid grid-cols-2 gap-2 md:gap-4">
+                        <img src="/assets/img/about-f.webp"
+                            alt="Professional trainer" width="400" height="533" loading="lazy" decoding="async">
+                        <img src="/assets/img/hero.webp"
+                            alt="Professional trainer" width="400" height="533" loading="lazy" decoding="async">
+                        <img src="/assets/img/about-m.webp"
+                            alt="Professional trainer" width="400" height="533" loading="lazy" decoding="async">
+                        <img src="/assets/img/about-f.webp"
+                            alt="Professional trainer" width="400" height="533" loading="lazy" decoding="async">
                     </div>
-                    <!-- Feature Item -->
-                    <div class="flex items-start gap-4">
-                        <!-- Icon -->
-                        <div class="shrink-0">
-                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
-                                <!-- Dumbbell / Strength -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M4 15v-3m16 3v-3M7 18V6m10 12V6M2 12h20" />
-                                </svg>
+                    <!-- About Content -->
+                    <div class="order-2 md:order-1 about-content fade">
+                        <span
+                            class="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold capitalize mb-2">
+                            why us?
+                        </span>
+                        <h2>ABOUT ME AND MY JOERNEY TILL HERE</h2>
+                        <p>With over a decade of experience transforming lives, I specialize in creating personalized
+                            fitness programs that deliver real, sustainable results. My approach combines cutting-edge
+                            training techniques with proven nutrition strategies to help you reach your full potential.</p>
+                        <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health, I'm
+                            here to guide you every step of the way with dedication, expertise, and unwavering support.</p>
+                        <!-- Feature Item -->
+                        <div class="flex items-start gap-4">
+                            <!-- Icon -->
+                            <div class="shrink-0">
+                                <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                    <!-- Lightning / Energy -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                    Fast and reliable
+                                </h4>
+                                <p>
+                                    Proin et convallis tincidunt tincidunt. Viverra ut
+                                    ullamcorp faucibus dictum. Integer in egestas volutpat.
+                                </p>
                             </div>
                         </div>
-                        <!-- Text -->
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
-                                Endurance training
-                            </h4>
-                            <p>
-                                Proin et convallis tincidunt tincidunt. Viverra ut
-                                ullamcorp faucibus dictum. Integer in egestas volutpat.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Feature Item -->
-                    <div class="flex items-start gap-4">
-                        <!-- Icon -->
-                        <div class="shrink-0">
-                            <div class="w-12 h-10 flex items-start justify-center text-orange-500">
-                                <!-- Heart / Endurance -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
-                                </svg>
+                        <!-- Feature Item -->
+                        <div class="flex items-start gap-4">
+                            <!-- Icon -->
+                            <div class="shrink-0">
+                                <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                    <!-- Dumbbell / Strength -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4 15v-3m16 3v-3M7 18V6m10 12V6M2 12h20" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                    Endurance training
+                                </h4>
+                                <p>
+                                    Proin et convallis tincidunt tincidunt. Viverra ut
+                                    ullamcorp faucibus dictum. Integer in egestas volutpat.
+                                </p>
                             </div>
                         </div>
-                        <!-- Text -->
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-900 mb-1">
-                                Fit and Healthy
-                            </h4>
-                            <p>
-                                Proin et convallis tincidunt tincidunt. Viverra ut
-                                ullamcorp faucibus dictum. Integer in egestas volutpat.
-                            </p>
+                        <!-- Feature Item -->
+                        <div class="flex items-start gap-4">
+                            <!-- Icon -->
+                            <div class="shrink-0">
+                                <div class="w-12 h-10 flex items-start justify-center text-orange-500">
+                                    <!-- Heart / Endurance -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                                    Fit and Healthy
+                                </h4>
+                                <p>
+                                    Proin et convallis tincidunt tincidunt. Viverra ut
+                                    ullamcorp faucibus dictum. Integer in egestas volutpat.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -261,7 +268,8 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img class="img" src="/assets/img/img1 (1).jpg" alt="Personal Training" loading="lazy">
+                        <img src="/assets/img/img1 (1).webp" width="640" height="360" alt="Personal Training"
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -278,7 +286,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img class="img" src="/assets/img/img1 (2).jpg" alt="Group Classes" loading="lazy">
+                        <img src="/assets/img/img1 (2).webp" width="640" height="360" alt="Group Classes" loading="lazy"
+                            decoding="async">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -295,7 +304,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img class="img" src="/assets/img/img1 (3).jpg" alt="Online Coaching" loading="lazy">
+                        <img src="/assets/img/img1 (3).webp" width="640" height="360" alt="Online Coaching"
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -311,7 +321,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img class="img" src="/assets/img/img1 (4).jpg" alt="Nutrition Planning" loading="lazy">
+                        <img src="/assets/img/img1 (4).webp" width="640" height="360" alt="Nutrition Planning"
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="service-content">
                         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -347,8 +358,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (4).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (4).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -367,8 +378,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (2).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (2).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -387,8 +398,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (1).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (1).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -407,8 +418,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (3).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (3).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -427,8 +438,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (4).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (4).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -447,8 +458,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (2).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (2).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -467,8 +478,8 @@
                 <div class="swiper-slide">
                     <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                         <div class="media">
-                            <img class="duration-300 linear" src="assets/img/img1 (3).jpg" alt="Person lifting dumbbell"
-                                loading="lazy">
+                            <img class="duration-300 linear" src="assets/img/img1 (3).webp"
+                                alt="Person lifting dumbbell" loading="eager" decoding="async">
                         </div>
                         <div class="flex flex-col items-start justify-between p-5 gap-3">
                             <div class="text-sm font-bold">MEN</div>
@@ -875,7 +886,8 @@
                 <!-- Single Blog -->
                 <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                     <div class="media">
-                        <img class="duration-300 linear" src="assets//img/img1 (4).jpg" alt="Person lifting dumbbell">
+                        <img class="duration-300 linear" width="640" height="360" src="assets//img/img1 (4).webp"
+                            alt="Person lifting dumbbell" loading="eager" decoding="async">
                     </div>
                     <div class="flex flex-col items-start justify-between p-5 gap-3 ">
                         <div class="badge text-lg font-semibold">MEN</div>
@@ -889,7 +901,8 @@
                 <!-- Single Blog -->
                 <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                     <div class="media">
-                        <img class="duration-300 linear" src="assets//img/img1 (2).jpg" alt="Person lifting dumbbell">
+                        <img class="duration-300 linear" width="640" height="360" src="assets//img/img1 (2).webp"
+                            alt="Person lifting dumbbell" loading="eager" decoding="async">
                     </div>
                     <div class="flex flex-col items-start justify-between p-5 gap-3">
                         <div class="badge text-lg font-semibold">MEN</div>
@@ -903,7 +916,8 @@
                 <!-- Single Blog -->
                 <div class="group flex flex-col items-center justify-between shadow-lg rounded-lg">
                     <div class="media">
-                        <img class="duration-300 linear" src="assets//img/img1 (3).jpg" alt="Person lifting dumbbell">
+                        <img class="duration-300 linear" width="640" height="360" src="assets//img/img1 (3).webp"
+                            alt="Person lifting dumbbell" loading="eager" decoding="async">
                     </div>
                     <div class="flex flex-col items-start justify-between p-5 gap-3 ">
                         <div class="badge text-lg font-semibold">MEN</div>
